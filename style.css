@@ -147,22 +147,19 @@ h1, h2, h3, h4, h5, h6,
 .logo-symbol {
     font-size: 2.4rem;
     margin-bottom: 6px;
-    display: inline-block;
-    width: 1.2em;
-    height: 1.2em;
-    line-height: 1.2em;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 6px auto;
     animation: spin-in-place 8s linear infinite;
-    transform-origin: center center;
+    transform-origin: 50% 50%;
 }
 
 @keyframes spin-in-place {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
-    }
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
 }
 .logo-text span {
     display: block;
