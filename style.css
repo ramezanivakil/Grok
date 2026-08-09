@@ -127,8 +127,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .spin-icon {
-    width: 90px;
-    height: 90px;
+    width: 180px;
+    height: 180px;
     object-fit: contain;
     display: block;
     animation: spin-in-place 8s linear infinite;
