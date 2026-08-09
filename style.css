@@ -148,16 +148,20 @@ h1, h2, h3, h4, h5, h6,
     font-size: 2.4rem;
     margin-bottom: 6px;
     display: inline-block;
-    animation: rotate-logo 8s linear infinite;
-    transform-origin: center center; /* نقطه ثابت وسط */
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+    animation: spin-in-place 8s linear infinite;
+    transform-origin: center center;
 }
 
-@keyframes rotate-logo {
+@keyframes spin-in-place {
     from {
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(-360deg); /* چرخش از راست به چپ (پادساعت‌گرد) */
+        transform: rotate(-360deg);
     }
 }
 .logo-text span {
