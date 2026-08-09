@@ -148,19 +148,18 @@ h1, h2, h3, h4, h5, h6,
     font-size: 2.4rem;
     margin-bottom: 6px;
     display: inline-block;
-    animation: rotate-logo 8s linear infinite; /* چرخش مداوم و آرام */
+    animation: rotate-logo 8s linear infinite;
+    transform-origin: center center; /* نقطه ثابت وسط */
 }
 
-/* انیمیشن چرخش لوگو */
 @keyframes rotate-logo {
     from {
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(-360deg); /* چرخش از راست به چپ (پادساعت‌گرد) */
     }
 }
-
 .logo-text span {
     display: block;
     font-size: 0.8rem;
