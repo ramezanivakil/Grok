@@ -1,12 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
 /* ========== هدر مدرن ========== */
 .modern-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(10, 37, 64, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    background: rgba(10, 37, 64, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
     padding: 14px 0;
     transition: all 0.3s ease;
 }
@@ -24,7 +43,6 @@
     font-size: 1.25rem;
     font-weight: 700;
     color: #d4af37;
-    letter-spacing: -0.5px;
 }
 
 .logo-icon {
@@ -33,30 +51,29 @@
 
 .nav-menu {
     display: flex;
-    gap: 8px;
+    gap: 6px;
 }
 
 .nav-link {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.88);
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 8px;
     font-size: 0.95rem;
     font-weight: 500;
     transition: all 0.25s ease;
-    position: relative;
 }
 
 .nav-link:hover,
 .nav-link.active {
     color: #d4af37;
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(212, 175, 55, 0.12);
 }
 
 /* ========== هیرو مدرن ========== */
 .hero-modern {
-    background: linear-gradient(135deg, #071a2e 0%, #0a2540 50%, #0d2d4a 100%);
-    padding: 60px 0 80px;
+    background: linear-gradient(135deg, #071a2e 0%, #0a2540 55%, #0d2d4a 100%);
+    padding: 70px 0 90px;
     position: relative;
     overflow: hidden;
 }
@@ -68,7 +85,6 @@
     min-height: 520px;
 }
 
-/* عکس بزرگ سمت چپ */
 .hero-image {
     flex: 0 0 42%;
     position: relative;
@@ -80,19 +96,17 @@
     height: auto;
     border-radius: 20px;
     object-fit: cover;
-    box-shadow: 
-        0 25px 50px -12px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55),
+                0 0 0 1px rgba(212, 175, 55, 0.25);
     position: relative;
     z-index: 2;
     transition: transform 0.4s ease;
 }
 
 .hero-image img:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
-/* افکت نور پشت عکس */
 .image-glow {
     position: absolute;
     top: 50%;
@@ -100,12 +114,11 @@
     transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
-    filter: blur(40px);
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.28) 0%, transparent 70%);
+    filter: blur(45px);
     z-index: 1;
 }
 
-/* متن سمت راست */
 .hero-text {
     flex: 1;
     color: white;
@@ -115,27 +128,25 @@
     font-size: 3rem;
     font-weight: 800;
     color: #d4af37;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     line-height: 1.2;
-    letter-spacing: -1px;
 }
 
 .hero-text h2 {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 22px;
 }
 
 .hero-text p {
     font-size: 1.1rem;
     line-height: 1.9;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.78);
     margin-bottom: 35px;
     max-width: 520px;
 }
 
-/* دکمه مدرن */
 .btn-modern {
     display: inline-flex;
     align-items: center;
@@ -147,29 +158,201 @@
     text-decoration: none;
     font-weight: 700;
     font-size: 1.05rem;
-    box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.45);
     transition: all 0.3s ease;
 }
 
 .btn-modern:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px -5px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 15px 30px -5px rgba(212, 175, 55, 0.55);
 }
 
-.btn-modern svg {
-    transition: transform 0.3s ease;
+/* ========== درباره من ========== */
+.about {
+    padding: 90px 0;
+    background: white;
 }
 
-.btn-modern:hover svg {
-    transform: translateX(-4px);
+.section-title {
+    text-align: center;
+    font-size: 2.1rem;
+    color: #0a2540;
+    margin-bottom: 55px;
+    position: relative;
 }
 
-/* ریسپانسیو */
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: #d4af37;
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h3 {
+    color: #0a2540;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    margin-bottom: 16px;
+    color: #444;
+}
+
+.about-text strong {
+    color: #0a2540;
+}
+
+/* ========== خدمات ========== */
+.services {
+    padding: 90px 0;
+    background: #f1f5f9;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+.service-card {
+    background: white;
+    padding: 36px 28px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    border-top: 4px solid #0a2540;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-top-color: #d4af37;
+}
+
+.service-icon {
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+}
+
+.service-card h3 {
+    color: #0a2540;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* ========== تماس ========== */
+.contact {
+    padding: 90px 0;
+    background: white;
+}
+
+.contact-box {
+    background: linear-gradient(135deg, #0a2540, #0d2d4a);
+    color: white;
+    padding: 50px;
+    border-radius: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: space-between;
+    box-shadow: 0 20px 40px rgba(10, 37, 64, 0.25);
+}
+
+.contact-info h3 {
+    color: #d4af37;
+    margin-bottom: 22px;
+    font-size: 1.4rem;
+}
+
+.contact-info p {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: rgba(255,255,255,0.95);
+}
+
+.contact-form textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: linear-gradient(135deg, #d4af37, #c9a227);
+    color: #0a2540;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ========== فوتر ========== */
+footer {
+    background: #071a2e;
+    color: #999;
+    text-align: center;
+    padding: 28px 0;
+    font-size: 0.9rem;
+}
+
+footer span {
+    color: #d4af37;
+}
+
+/* ========== ریسپانسیو ========== */
 @media (max-width: 900px) {
     .hero-wrapper {
         flex-direction: column-reverse;
         text-align: center;
         gap: 40px;
+        min-height: auto;
     }
 
     .hero-image {
@@ -177,7 +360,7 @@
     }
 
     .hero-image img {
-        max-width: 320px;
+        max-width: 300px;
     }
 
     .hero-text h1 {
@@ -190,6 +373,15 @@
     }
 
     .nav-menu {
-        display: none; /* بعداً منوی همبرگری اضافه می‌کنیم */
+        display: none;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-box {
+        padding: 35px 25px;
     }
 }
