@@ -3,308 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وکیل پایه یک دادگستری | معرفی و خدمات</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Tahoma, 'Segoe UI', sans-serif;
-        }
-
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.8;
-        }
-
-        /* هدر */
-        header {
-            background: linear-gradient(135deg, #0a2540, #1a3a5c);
-            color: white;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #d4af37;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 25px;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #d4af37;
-        }
-
-        /* بخش هیرو */
-        .hero {
-            background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), 
-                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600') center/cover;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.6rem;
-            margin-bottom: 15px;
-            color: #d4af37;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #d4af37;
-            color: #0a2540;
-            padding: 12px 35px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-
-        .btn:hover {
-            background: #c9a227;
-            transform: translateY(-2px);
-        }
-
-        /* درباره من */
-        .about {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            color: #0a2540;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            width: 80px;
-            height: 3px;
-            background: #d4af37;
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .about-content {
-            display: flex;
-            gap: 50px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .about-text h3 {
-            color: #0a2540;
-            margin-bottom: 15px;
-        }
-
-        .about-image {
-            flex: 1;
-            min-width: 280px;
-            text-align: center;
-        }
-
-        .about-image img {
-            width: 280px;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 5px solid #d4af37;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        /* خدمات */
-        .services {
-            padding: 80px 0;
-            background: #f1f5f9;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 35px 25px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 4px solid #0a2540;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-        }
-
-        .service-card h3 {
-            color: #0a2540;
-            margin: 15px 0 10px;
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: #d4af37;
-        }
-
-        /* تماس */
-        .contact {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .contact-box {
-            background: #0a2540;
-            color: white;
-            padding: 50px;
-            border-radius: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            justify-content: space-between;
-        }
-
-        .contact-info h3 {
-            color: #d4af37;
-            margin-bottom: 20px;
-        }
-
-        .contact-info p {
-            margin-bottom: 12px;
-            font-size: 1.05rem;
-        }
-
-        .contact-form {
-            flex: 1;
-            min-width: 280px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px 15px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 5px;
-            font-family: inherit;
-        }
-
-        .contact-form textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        .contact-form button {
-            background: #d4af37;
-            color: #0a2540;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        /* فوتر */
-        footer {
-            background: #071a2e;
-            color: #aaa;
-            text-align: center;
-            padding: 25px 0;
-            font-size: 0.9rem;
-        }
-
-        footer span {
-            color: #d4af37;
-        }
-
-        /* موبایل */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin: 0 10px;
-            }
-
-            .hero h1 {
-                font-size: 1.9rem;
-            }
-
-            .about-content {
-                flex-direction: column-reverse;
-            }
-        }
-    </style>
+    <title>دکتر محمد رضایی | وکیل پایه یک دادگستری</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- هدر -->
-    <header>
+    <header class="modern-header">
         <div class="container header-content">
-            <div class="logo">وکیل پایه یک دادگستری</div>
-            <nav>
-                <a href="#home">خانه</a>
-                <a href="#about">درباره من</a>
-                <a href="#services">خدمات</a>
-                <a href="#contact">تماس</a>
+            <div class="logo">
+                <span class="logo-icon">⚖️</span>
+                وکیل پایه یک دادگستری
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">خانه</a>
+                <a href="#about" class="nav-link">درباره من</a>
+                <a href="#services" class="nav-link">خدمات</a>
+                <a href="#contact" class="nav-link">تماس</a>
             </nav>
         </div>
     </header>
 
-    <!-- بخش اصلی -->
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>نام و نام خانوادگی شما</h1>
-            <p>وکیل پایه یک دادگستری با بیش از ۱۵ سال سابقه درخشان در پرونده‌های کیفری، خانواده و ملکی</p>
-            <a href="#contact" class="btn">دریافت مشاوره</a>
+    <!-- هیرو -->
+    <section class="hero-modern" id="home">
+        <div class="container hero-wrapper">
+            <div class="hero-image">
+                <!-- عکس خودت را اینجا قرار بده -->
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600" alt="دکتر محمد رضایی">
+                <div class="image-glow"></div>
+            </div>
+
+            <div class="hero-text">
+                <h1>دکتر محمد رضایی</h1>
+                <h2>وکیل پایه یک دادگستری با بیش از ۱۵ سال تجربه</h2>
+                <p>
+                    ارائه مشاوره تخصصی و پیگیری حرفه‌ای دعاوی حقوقی، کیفری و تجاری
+                    با تکیه بر دانش روز حقوق و تعهد به اصول اخلاقی وکالت.
+                    همراه شما در مسیر عدالت و احقاق حق.
+                </p>
+                <a href="#contact" class="btn-modern">دریافت مشاوره</a>
+            </div>
         </div>
     </section>
 
@@ -316,7 +54,7 @@
                 <div class="about-text">
                     <h3>وکیل پایه یک دادگستری</h3>
                     <p>
-                        اینجانب با بیش از ۱۵ سال سابقه حرفه‌ای در زمینه وکالت و مشاوره حقوقی، 
+                        اینجانب با بیش از ۱۵ سال سابقه حرفه‌ای در زمینه وکالت و مشاوره حقوقی،
                         افتخار دارم که در صدها پرونده موفق، از حقوق موکلین خود دفاع کرده‌ام.
                     </p>
                     <p>
@@ -324,10 +62,7 @@
                         هدف من ارائه خدمات حقوقی شفاف، صادقانه و نتیجه‌محور می‌باشد.
                     </p>
                     <p><strong>شماره پروانه وکالت:</strong> ۱۲۳۴۵۶</p>
-                </div>
-                <div class="about-image">
-                    <!-- اینجا عکس خودت را بگذار -->
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="عکس وکیل">
+                    <p><strong>عضو کانون وکلای دادگستری:</strong> مرکز</p>
                 </div>
             </div>
         </div>
@@ -374,12 +109,15 @@
                     <p>📍 آدرس: تهران، خیابان ولیعصر، پلاک ۱۲۳</p>
                     <p>🕒 ساعات پاسخگویی: شنبه تا چهارشنبه ۹ تا ۱۷</p>
                 </div>
-                <div class="contact-form">
-                    <input type="text" placeholder="نام و نام خانوادگی">
-                    <input type="tel" placeholder="شماره تماس">
-                    <textarea placeholder="پیام شما..."></textarea>
+
+                <form class="contact-form" action="https://formspree.io/f/xxxxxxxx" method="POST">
+                    <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
+                    <input type="tel" name="phone" placeholder="شماره تماس" required>
+                    <input type="email" name="email" placeholder="ایمیل (اختیاری)">
+                    <textarea name="message" placeholder="پیام شما..." required></textarea>
+                    <input type="hidden" name="_subject" value="پیام جدید از سایت وکالت">
                     <button type="submit">ارسال پیام</button>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -387,7 +125,7 @@
     <!-- فوتر -->
     <footer>
         <div class="container">
-            <p>© ۱۴۰۵ تمامی حقوق محفوظ است | طراحی شده برای <span>وکیل پایه یک دادگستری</span></p>
+            <p>© ۱۴۰۵ تمامی حقوق محفوظ است | طراحی شده برای <span>دکتر محمد رضایی</span> - وکیل پایه یک دادگستری</p>
         </div>
     </footer>
 
