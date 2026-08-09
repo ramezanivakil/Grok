@@ -150,16 +150,22 @@ h1, h2, h3, h4, h5, h6,
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
     height: 50px;
-    margin: 0 auto 6px auto;
+}
+
+.spin-icon {
+    display: inline-block;
     animation: spin-in-place 8s linear infinite;
-    transform-origin: 50% 50%;
+    transform-origin: center center;
 }
 
 @keyframes spin-in-place {
-    0%   { transform: rotate(0deg); }
-    100% { transform: rotate(-360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
 }
 .logo-text span {
     display: block;
