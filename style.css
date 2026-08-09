@@ -79,13 +79,15 @@ h1, h2, h3, h4, h5, h6,
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     font-size: 1.15rem;
     color: #d4af37;
 }
 
-.logo-icon {
-    font-size: 1.3rem;
+.header-logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -144,17 +146,19 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .logo-symbol {
-    font-size: 2.4rem;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 70px;
 }
 
-/* چرخش مثل فرفره (درجا و از راست به چپ) */
+/* چرخش لوگو مثل فرفره */
 .spin-icon {
-    display: inline-block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
     animation: spin-in-place 8s linear infinite;
     transform-origin: center center;
 }
@@ -237,7 +241,7 @@ h1, h2, h3, h4, h5, h6,
     box-shadow: 0 8px 18px -3px rgba(212, 175, 55, 0.5);
 }
 
-/* عکس سمت راست */
+/* عکس پروفایل سمت راست */
 .hero-image {
     flex: 0 0 28%;
     position: relative;
