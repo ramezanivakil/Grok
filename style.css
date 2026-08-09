@@ -1,15 +1,15 @@
 /* ========== فونت وزیرمتن (محلی) ========== */
 @font-face {
-    font-family: 'BTitrBd';
-    src: url('fonts/BTitrBd.ttf') format('truetype');
+    font-family: 'Vazirmatn';
+    src: url('fonts/Vazirmatn-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'BTitrBd';
-    src: url('fonts/BTitrBd.ttf') format('truetype');
+    font-family: 'Vazirmatn';
+    src: url('fonts/Vazirmatn-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -20,7 +20,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Vazirmatn', Tahoma, sans-serif;
 }
 
 body {
@@ -28,12 +27,26 @@ body {
     color: #333;
     line-height: 1.8;
     font-family: 'Vazirmatn', Tahoma, sans-serif;
+    font-weight: 400; /* متن معمولی */
 }
 
 .container {
     width: 90%;
     max-width: 1140px;
     margin: 0 auto;
+}
+
+/* ========== عنوان‌ها (ضخیم) ========== */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.logo,
+.hero-text h1,
+.hero-text h2,
+.service-card h3,
+.contact-info h3,
+.about-text h3 {
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    font-weight: 700;
 }
 
 /* ========== نوار بالا ========== */
@@ -130,6 +143,7 @@ body {
     display: block;
     font-size: 0.8rem;
     color: rgba(255,255,255,0.75);
+    font-weight: 400;
 }
 
 .logo-text strong {
@@ -137,6 +151,7 @@ body {
     font-size: 1.15rem;
     color: #d4af37;
     margin-top: 2px;
+    font-weight: 700;
 }
 
 /* متن وسط */
@@ -149,7 +164,7 @@ body {
 
 .hero-text h1 {
     font-size: 1.9rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #d4af37;
     margin-bottom: 6px;
     line-height: 1.2;
@@ -170,6 +185,7 @@ body {
     max-width: 420px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 400;
 }
 
 .btn-modern {
@@ -241,6 +257,7 @@ body {
     color: #0a2540;
     margin-bottom: 45px;
     position: relative;
+    font-weight: 700;
 }
 
 .section-title::after {
@@ -271,15 +288,18 @@ body {
     color: #0a2540;
     font-size: 1.35rem;
     margin-bottom: 14px;
+    font-weight: 700;
 }
 
 .about-text p {
     margin-bottom: 13px;
     color: #444;
+    font-weight: 400;
 }
 
 .about-text strong {
     color: #0a2540;
+    font-weight: 700;
 }
 
 /* ========== خدمات (۳ ستون) ========== */
@@ -319,11 +339,13 @@ body {
     color: #0a2540;
     margin-bottom: 8px;
     font-size: 1.15rem;
+    font-weight: 700;
 }
 
 .service-card p {
     color: #555;
     font-size: 0.92rem;
+    font-weight: 400;
 }
 
 /* ========== تماس ========== */
@@ -348,11 +370,13 @@ body {
     color: #d4af37;
     margin-bottom: 18px;
     font-size: 1.3rem;
+    font-weight: 700;
 }
 
 .contact-info p {
     margin-bottom: 11px;
     font-size: 1rem;
+    font-weight: 400;
 }
 
 .contact-form {
@@ -369,6 +393,7 @@ body {
     border-radius: 9px;
     font-family: inherit;
     font-size: 0.95rem;
+    font-weight: 400;
     background: rgba(255,255,255,0.95);
 }
 
@@ -402,10 +427,12 @@ footer {
     text-align: center;
     padding: 22px 0;
     font-size: 0.9rem;
+    font-weight: 400;
 }
 
 footer span {
     color: #d4af37;
+    font-weight: 700;
 }
 
 /* ========== ریسپانسیو ========== */
