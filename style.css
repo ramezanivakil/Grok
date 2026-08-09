@@ -1,14 +1,33 @@
+/* ========== فونت وزیرمتن (محلی) ========== */
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('fonts/Vazirmatn-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('fonts/Vazirmatn-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ========== تنظیمات کلی ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Tahoma, 'Segoe UI', sans-serif;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
 }
 
 body {
     background-color: #f8f9fa;
     color: #333;
     line-height: 1.8;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
 }
 
 .container {
@@ -72,7 +91,7 @@ body {
 /* ========== هیرو ========== */
 .hero-modern {
     background: linear-gradient(135deg, #071a2e 0%, #0a2540 55%, #0d2d4a 100%);
-    padding: 20px 0 25px;          /* ۲۰٪ کم‌تر از قبل */
+    padding: 20px 0 25px;
     position: relative;
     overflow: hidden;
 }
@@ -82,7 +101,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    min-height: 210px;              /* ارتفاع کم‌تر */
+    min-height: 210px;
 }
 
 /* لوگو سمت چپ */
