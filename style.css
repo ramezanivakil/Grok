@@ -1,0 +1,195 @@
+/* ========== هدر مدرن ========== */
+.modern-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10, 37, 64, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    padding: 14px 0;
+    transition: all 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #d4af37;
+    letter-spacing: -0.5px;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.1);
+}
+
+/* ========== هیرو مدرن ========== */
+.hero-modern {
+    background: linear-gradient(135deg, #071a2e 0%, #0a2540 50%, #0d2d4a 100%);
+    padding: 60px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    min-height: 520px;
+}
+
+/* عکس بزرگ سمت چپ */
+.hero-image {
+    flex: 0 0 42%;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(212, 175, 55, 0.2);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
+}
+
+/* افکت نور پشت عکس */
+.image-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
+    filter: blur(40px);
+    z-index: 1;
+}
+
+/* متن سمت راست */
+.hero-text {
+    flex: 1;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #d4af37;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.hero-text h2 {
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 35px;
+    max-width: 520px;
+}
+
+/* دکمه مدرن */
+.btn-modern {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #d4af37, #c9a227);
+    color: #0a2540;
+    padding: 14px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-modern:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -5px rgba(212, 175, 55, 0.5);
+}
+
+.btn-modern svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-modern:hover svg {
+    transform: translateX(-4px);
+}
+
+/* ریسپانسیو */
+@media (max-width: 900px) {
+    .hero-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-image {
+        flex: none;
+    }
+
+    .hero-image img {
+        max-width: 320px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav-menu {
+        display: none; /* بعداً منوی همبرگری اضافه می‌کنیم */
+    }
+}
