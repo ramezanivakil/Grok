@@ -292,4 +292,222 @@ h1, h2, h3, h4, h5, h6,
     content: '';
     width: 65px;
     height: 3px;
-    background: #d
+    background: #d4af37;
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h3 {
+    color: #0a2540;
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+}
+
+.about-text p {
+    margin-bottom: 13px;
+    color: #444;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    font-weight: 400;
+}
+
+.about-text strong {
+    color: #0a2540;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    font-weight: 700;
+}
+
+/* ========== خدمات (۳ ستون) ========== */
+.services {
+    padding: 70px 0;
+    background: #f1f5f9;
+}
+
+.services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 22px;
+}
+
+.service-card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    border-top: 4px solid #0a2540;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.1);
+    border-top-color: #d4af37;
+}
+
+.service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    color: #0a2540;
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 0.92rem;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    font-weight: 400;
+}
+
+/* ========== تماس ========== */
+.contact {
+    padding: 70px 0;
+    background: white;
+}
+
+.contact-box {
+    background: linear-gradient(135deg, #0a2540, #0d2d4a);
+    color: white;
+    padding: 40px;
+    border-radius: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: space-between;
+    box-shadow: 0 15px 30px rgba(10, 37, 64, 0.25);
+}
+
+.contact-info h3 {
+    color: #d4af37;
+    margin-bottom: 18px;
+    font-size: 1.3rem;
+}
+
+.contact-info p {
+    margin-bottom: 11px;
+    font-size: 1rem;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    font-weight: 400;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 260px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 9px;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    background: rgba(255,255,255,0.95);
+}
+
+.contact-form textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: linear-gradient(135deg, #d4af37, #c9a227);
+    color: #0a2540;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(212, 175, 55, 0.4);
+}
+
+/* ========== فوتر ========== */
+footer {
+    background: #071a2e;
+    color: #999;
+    text-align: center;
+    padding: 22px 0;
+    font-size: 0.9rem;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    font-weight: 400;
+}
+
+footer span {
+    color: #d4af37;
+    font-family: 'BTitr', Tahoma, sans-serif;
+}
+
+/* ========== ریسپانسیو ========== */
+@media (max-width: 900px) {
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        min-height: auto;
+    }
+
+    .hero-logo,
+    .hero-image {
+        flex: none;
+    }
+
+    .hero-image img {
+        max-width: 200px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.7rem;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-box {
+        padding: 28px 20px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
