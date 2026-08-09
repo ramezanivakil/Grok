@@ -17,12 +17,12 @@ body {
     margin: 0 auto;
 }
 
-/* ========== هدر ========== */
+/* ========== نوار بالا ========== */
 .modern-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(10, 37, 64, 0.9);
+    background: rgba(10, 37, 64, 0.92);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(212, 175, 55, 0.18);
@@ -69,10 +69,10 @@ body {
     background: rgba(212, 175, 55, 0.12);
 }
 
-/* ========== هیرو (ارتفاع خیلی کم شده) ========== */
+/* ========== هیرو ========== */
 .hero-modern {
     background: linear-gradient(135deg, #071a2e 0%, #0a2540 55%, #0d2d4a 100%);
-    padding: 25px 0 30px;          /* ارتفاع نصف‌شده */
+    padding: 20px 0 25px;          /* ۲۰٪ کم‌تر از قبل */
     position: relative;
     overflow: hidden;
 }
@@ -80,24 +80,114 @@ body {
 .hero-wrapper {
     display: flex;
     align-items: center;
-    gap: 40px;
-    min-height: 260px;              /* ارتفاع خیلی کم */
+    justify-content: space-between;
+    gap: 30px;
+    min-height: 210px;              /* ارتفاع کم‌تر */
 }
 
-/* تصویر سمت راست */
+/* لوگو سمت چپ */
+.hero-logo {
+    flex: 0 0 18%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 16px;
+    padding: 18px 14px;
+    text-align: center;
+    color: white;
+    min-width: 130px;
+}
+
+.logo-symbol {
+    font-size: 2.4rem;
+    margin-bottom: 6px;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.75);
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 1.15rem;
+    color: #d4af37;
+    margin-top: 2px;
+}
+
+/* متن وسط */
+.hero-text {
+    flex: 1;
+    color: white;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.hero-text h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #d4af37;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.hero-text h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.78);
+    margin-bottom: 16px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-modern {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #d4af37, #c9a227);
+    color: #0a2540;
+    padding: 9px 22px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    box-shadow: 0 5px 14px -3px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px -3px rgba(212, 175, 55, 0.5);
+}
+
+/* عکس سمت راست */
 .hero-image {
-    flex: 0 0 34%;
+    flex: 0 0 28%;
     position: relative;
-    order: 2;
+    display: flex;
+    justify-content: center;
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 280px;
+    max-width: 230px;
     height: auto;
-    border-radius: 16px;
+    border-radius: 14px;
     object-fit: cover;
-    box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.5),
+    box-shadow: 0 12px 25px -6px rgba(0, 0, 0, 0.5),
                 0 0 0 1px rgba(212, 175, 55, 0.25);
     position: relative;
     z-index: 2;
@@ -116,58 +206,8 @@ body {
     width: 90%;
     height: 90%;
     background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, transparent 70%);
-    filter: blur(35px);
+    filter: blur(30px);
     z-index: 1;
-}
-
-/* متن سمت چپ */
-.hero-text {
-    flex: 1;
-    color: white;
-    order: 1;
-}
-
-.hero-text h1 {
-    font-size: 2.1rem;
-    font-weight: 800;
-    color: #d4af37;
-    margin-bottom: 8px;
-    line-height: 1.2;
-}
-
-.hero-text h2 {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.92);
-    margin-bottom: 12px;
-}
-
-.hero-text p {
-    font-size: 0.98rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.78);
-    margin-bottom: 20px;
-    max-width: 480px;
-}
-
-.btn-modern {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: linear-gradient(135deg, #d4af37, #c9a227);
-    color: #0a2540;
-    padding: 10px 24px;
-    border-radius: 9px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.95rem;
-    box-shadow: 0 6px 16px -4px rgba(212, 175, 55, 0.4);
-    transition: all 0.3s ease;
-}
-
-.btn-modern:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px -4px rgba(212, 175, 55, 0.5);
 }
 
 /* ========== درباره من ========== */
@@ -223,7 +263,7 @@ body {
     color: #0a2540;
 }
 
-/* ========== خدمات (اجباراً ۳ ستون) ========== */
+/* ========== خدمات (۳ ستون) ========== */
 .services {
     padding: 70px 0;
     background: #f1f5f9;
@@ -354,30 +394,21 @@ footer span {
     .hero-wrapper {
         flex-direction: column;
         text-align: center;
-        gap: 25px;
+        gap: 20px;
         min-height: auto;
     }
 
+    .hero-logo,
     .hero-image {
-        order: 1;
         flex: none;
     }
 
-    .hero-text {
-        order: 2;
-    }
-
     .hero-image img {
-        max-width: 240px;
+        max-width: 200px;
     }
 
     .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-text p {
-        margin-left: auto;
-        margin-right: auto;
+        font-size: 1.7rem;
     }
 
     .nav-menu {
